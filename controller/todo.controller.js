@@ -38,9 +38,10 @@ const putTodo = async (req, res) => {
 };
 
 const deleteTodo = async (req, res) => {
-  const id_param = req.params;
+  const id_param =req.params;
   console.log(id_param);
-  const del = await Todo.deleteOne({ id_task: id_param.id_val });
+  // id_param.id_val
+  const del = await Todo.deleteOne({ _id:id_param.id_val });
   res.send({ msg: del });
 };
 
