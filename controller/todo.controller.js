@@ -28,10 +28,10 @@ const putTodo = async (req, res) => {
   const data_id = req.params.edit;
   const new_data = req.body;
 //   console.log(new_data);
-//   console.log(data_id);
+  console.log(data_id);
   const changed_data = await Todo.updateMany(
-    { id_task: data_id },
-    { $set: new_data }
+    { _id: data_id },
+    { $set: new_data } 
   );
 
   res.send({ msg: changed_data });

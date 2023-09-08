@@ -9,6 +9,6 @@ todoTask.post("/createtask",postTodo)
 
 todoTask.delete("/:id_val",deleteTodo)
 
-todoTask.put("/:edit",putTodo)
+todoTask.put("/change/:edit",putTodo)
 
 module.exports = {todoTask}
