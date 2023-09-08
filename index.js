@@ -1,11 +1,11 @@
 const express = require("express")
 const cors = require("cors");
-const {connection} = require("../backend/db")
+const {connection} = require("./DB/db.js")
 const app = express();
 require("dotenv").config();
 
-const {Todo} = require("../backend/model/Todo.model")
-const {todoTask} = require("../backend/route/TodoTitle.route")
+// const {Todo} = require("../backend/model/Todo.model")
+const {todoTask} = require("./route/TodoTitle.route.js")
 
 app.use(express.json());
 app.use(cors());
