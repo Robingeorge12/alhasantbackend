@@ -5,7 +5,7 @@ const TodoAl = mongoose.Schema({
     task:{type:String},
     desc:{type:String},
     id_task:{type:Number},
-    current_status:{type:String,default:["Do","Doing","Done"]}
+    current_status:{type:String,default:["To Do","Doing","Done"]}
 
 })
 
